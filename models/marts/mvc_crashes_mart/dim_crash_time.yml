@@ -15,13 +15,6 @@ models:
           - not_null
           - unique
 
-      - name: crash_time
-        description: >
-          Distinct crash time value from the staged MVC crash data.
-        tests:
-          - not_null
-          - unique
-
       - name: hour
         description: >
           Hour extracted from the crash time value.
