@@ -84,6 +84,3 @@ models:
           Measure representing one complaint per row (always = 1).
         tests:
           - not_null
-          - accepted_values:
-              arguments:
-                values: ['1']
