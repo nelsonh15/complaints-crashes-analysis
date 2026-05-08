@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: fact_illegal_parking
+  - name: fact_311_illegal_parking
     description: >
       Fact table capturing illegal parking complaints from NYC 311 data.
       Grain: one row per complaint (complaint_id).
