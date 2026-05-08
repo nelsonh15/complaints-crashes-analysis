@@ -22,24 +22,24 @@ models:
   group18_analytics:
     staging:
       +materialized: table
-      +schema: "{{ 'group18_analytics' if target.name == 'prod' else 'group18_stg_data' }}"
+      +schema: "{{ 'group18_analytics' if target.name == 'default' else 'group18_stg_data' }}"
 
     marts:
       +materialized: table
 
       shared:
-        +schema: "{{ 'group18_analytics' if target.name == 'prod' else 'group_18_conformed_dimensions' }}"
+        +schema: "{{ 'group18_analytics' if target.name == 'default' else 'group_18_conformed_dimensions' }}"
       
       illegal_parking_mart:
-        +schema: "{{ 'group18_analytics' if target.name == 'prod' else 'group_18_illegal_parking_mart' }}"
+        +schema: "{{ 'group18_analytics' if target.name == 'default' else 'group_18_illegal_parking_mart' }}"
       
       mvc_crashes_mart:
-        +schema: "{{ 'group18_analytics' if target.name == 'prod' else 'group_18_mvc_crashes_mart' }}"
+        +schema: "{{ 'group18_analytics' if target.name == 'default' else 'group_18_mvc_crashes_mart' }}"
 
 seeds:
   group18_analytics:
     nyc_zip_polygons:
-      +schema: "{{ 'group18_analytics' if target.name == 'prod' else 'group18_seed' }}"
+      +schema: "{{ 'group18_analytics' if target.name == 'default' else 'group18_seed' }}"
       +column_types:
         zip_code: string
         borough: string
