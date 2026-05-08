@@ -23,31 +23,26 @@ models:
         description: Surrogate key 'dim_date' dimension table
         tests:
           - not_null
-          - unique
       
       - name: geo_key
         description: Surrogate key for the 'dim_geography_bucket' dimension table
         tests:
           - not_null
-          - unique
         
       - name: crash_time_key
         description: Surrogate key for the 'dim_crash_time' dimension table
         tests:
           - not_null
-          - unique
       
       - name: factor_key
         description: Surrogate key for the 'dim_contributing_factor' dimension table
         tests:
           - not_null
-          - unique
       
       - name: vehicle_type_key
         description: Surrogate key for the 'dim_vehicle_type' dimension table
         tests:
           - not_null
-          - unique
       
       - name: number_of_persons_injured
         description: The number of persons injured
